@@ -26,7 +26,7 @@ def save_users(users):
 
 # ---------------- LOGIN PAGE ----------------
 
-ddef login_page():
+def login_page():
     st.title("🔐 Login Kartu Persediaan")
     tab_login, tab_register, tab_forgot = st.tabs(["Login", "Register", "Lupa Password"])
     users = load_users()
@@ -186,4 +186,5 @@ if "login" not in st.session_state:
 if st.session_state["login"]:
     main_app()
 else:
+
     login_page()
